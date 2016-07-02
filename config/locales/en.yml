@@ -6,6 +6,8 @@ en:
   project: "Elearning App"
   home: "Home"
   help: "Help"
+  homepage: "This is the homepage for Elearning App"
+  welcome: "Welcome to the Elearning App"
 
   categories:
     empty: "Have no data in database"
