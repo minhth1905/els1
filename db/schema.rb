@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629053705) do
+ActiveRecord::Schema.define(version: 20160702161946) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "word_learned_quantity", limit: 4
@@ -74,13 +74,13 @@ ActiveRecord::Schema.define(version: 20160629053705) do
   add_index "results", ["word_id"], name: "index_results_on_word_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "password",   limit: 255
-    t.string   "email",      limit: 255
-    t.string   "address",    limit: 255
-    t.integer  "admin",      limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",            limit: 255
+    t.string   "email",           limit: 255
+    t.string   "address",         limit: 255
+    t.integer  "admin",           limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "password_digest", limit: 255
   end
 
   create_table "words", force: :cascade do |t|
