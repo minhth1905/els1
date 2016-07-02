@@ -1,8 +1,8 @@
-<% provide :title, t(:categories_title) %>
-<h1><%= t :categories_title %></h1>
+<% provide :title, t("categories.title") %>
+<h1><%= t("categories.title") %></h1>
 
 <% if @categories.empty? %>
-  <h2><%= t :categories_nil %></h2>
+  <h2><%= t("categories.empty") %></h2>
 <% else %>
   <ul class="categories">
     <% @categories.each do |category| %>
@@ -10,7 +10,7 @@
         <div>
           <h2><%= category.title %></h2>
           <p><%= category.description %></p>
-          <%= link_to "Start", category, class: "btn btn-success btn-lg" %>
+          <%= link_to t("categories.start"), category, class: "btn btn-success btn-lg" %>
         </div>
       </li>
     <% end %>

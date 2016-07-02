@@ -7,5 +7,8 @@ en:
   home: "Home"
   help: "Help"
 
-  categories_title: "All categories"
-  categories_nil: "Have no data in database"
+  categories:
+    title: "All categories"
+    empty: "Have no data in database"
+    start: "Start"
+    form_submit: "Create new category"
