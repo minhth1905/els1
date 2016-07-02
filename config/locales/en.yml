@@ -6,3 +6,6 @@ en:
   project: "Elearning App"
   home: "Home"
   help: "Help"
+
+  categories_title: "All categories"
+  categories_nil: "Have no data in database"
