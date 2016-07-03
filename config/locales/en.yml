@@ -12,11 +12,13 @@ en:
   categories:
     empty: "Have no data in database"
     fail_create: "Error create"
+    fail_delete: "Error delete"
     fail_update: "Error update"
     form_submit: "Create new category"
     save_change: "Save change"
     start: "Start"
     success_create: "Create new category successfully!"
+    success_delete: "Delete successfully!"
     success_update: "Update category successfully!"
     title: "All categories"
 
