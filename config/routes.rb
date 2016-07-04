@@ -5,6 +5,12 @@ Rails.application.routes.draw do
  get "about" => "static_pages#about"
  get "contact" => "static_pages#contact"
  get "signup" => "users#new"
- resources :categories
- resources :users
+
+ namespace :admin do
+   resources :users
+   resources :categories
+ end
+
+ resources :categories, only: [:index, :show]
+ resources :users, except: [:destroy]
 end
