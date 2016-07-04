@@ -23,3 +23,9 @@ en:
   error:
     err: "error"
     title: "The form contains"
+
+  user:
+    confirmation: "Confirmation"
+    create_fail: "Error create"
+    create_success: "Create new user successfully!"
+    submit: "Create my account"
