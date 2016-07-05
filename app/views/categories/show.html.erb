@@ -1,0 +1,14 @@
+<h4>
+  <%= @category.title %>
+</h4>
+<%= will_paginate %>
+
+<ul class="category">
+  <% @words.each do |word| %>
+    <li>
+      <%= word.national %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
