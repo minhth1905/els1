@@ -1,0 +1,14 @@
+<div class="form-login">
+  <%= form_for(:session, url: login_path) do |f| %>
+    <h4><%= t("session.login") %></h4>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control input-sm chat-input" %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control input-sm chat-input" %>
+
+    <%= f.submit t("session.login"), class: "btn btn-primary btn-md" %>
+  <% end %>
+  <p><%= t("session.new") %> <%= link_to t("session.signup"), signup_path %></p>
+</div>
