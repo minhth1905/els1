@@ -31,3 +31,13 @@ en:
     create_fail: "Error create"
     create_success: "Create new user successfully!"
     submit: "Create my account"
+  session:
+    account: "Account"
+    login: "Log in"
+    login_fail: "Invalid email/password combination"
+    logout: "Log out"
+    new: "New user?"
+    profile: "Profile"
+    signup: "Sign up now!"
+    setting: "Settings"
+    user: "User"
