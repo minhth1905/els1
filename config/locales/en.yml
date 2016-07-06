@@ -30,7 +30,13 @@ en:
     confirmation: "Confirmation"
     create_fail: "Error create"
     create_success: "Create new user successfully!"
+    edit_user: "Edit user"
+    must_login: "Please log in."
     submit: "Create my account"
+    update: "Update your profile"
+    update_fail: "Error update"
+    user_edit: "Profile updated"
+
   session:
     account: "Account"
     login: "Log in"
