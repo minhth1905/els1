@@ -13,10 +13,12 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to t("session.profile"), current_user %></li>
-              <li><%= link_to t("session.setting"), "#" %></li>
+              <li><%= link_to t("session.setting"),
+                edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to t("session.logout"), logout_path, method: "delete" %>
+                <%= link_to t("session.logout"), logout_path,
+                  method: :delete %>
               </li>
             </ul>
           </li>
