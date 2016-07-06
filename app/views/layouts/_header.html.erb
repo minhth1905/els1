@@ -6,7 +6,7 @@
         <li><%= link_to t(:home), home_path %></li>
         <li><%= link_to t(:help), help_path %></li>
         <% if logged_in? %>
-          <li><%= link_to t("session.user"), "#" %></li>
+          <li><%= link_to t("session.user"), users_path %></li>
           <li class= "dropdown">
             <a href= "#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t("session.account") %> <b class="caret"></b>
