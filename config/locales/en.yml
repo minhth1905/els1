@@ -47,3 +47,13 @@ en:
     signup: "Sign up now!"
     setting: "Settings"
     user: "User"
+  words:
+    alert_1: "Have no words"
+    alert_2: "Please select to filter words"
+    label_all: "All"
+    label_learn: "Learned"
+    label_notlearn: "Not learned"
+    radio_all: "all"
+    radio_learn: "learned"
+    radio_notlearn: "notlearned"
+    submit: "Filter"
