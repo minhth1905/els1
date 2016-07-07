@@ -30,6 +30,8 @@ en:
     confirmation: "Confirmation"
     create_fail: "Error create"
     create_success: "Create new user successfully!"
+    destroy_fail: "Error delete"
+    destroy_success: "Delete successfully!"
     edit_user: "Edit user"
     must_login: "Please log in."
     submit: "Create my account"
