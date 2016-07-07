@@ -1,0 +1,12 @@
+<%= form_for @word do |f| %>
+  <%= f.label :national %>
+  <%= f.text_field :national %><br>
+
+  <%= f.fields_for :answers do |builder| %>
+    <%= builder.label :meaning %>
+    <%= builder.check_box :status %>
+    <%= builder.text_field :meaning %><br>
+  <% end %>
+
+  <%= f.submit t("words.submit_update") %>
+<% end %>

@@ -1,4 +1,6 @@
 class WordsController < ApplicationController
+  before_action :find_word, except: [:new, :index, :create]
+
   def index
     @categories = Category.all
     if params[:category] && params[:learn]
@@ -14,12 +16,11 @@ class WordsController < ApplicationController
   end
 
   def show
-    @word = Word.find(params[:id])
   end
 
   def new
     @word = Word.new
-    4.times do
+    Settings.number_answers.times do
       @word.answers.build
     end
   end
@@ -35,9 +36,26 @@ class WordsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @word.update_attributes(word_params)
+      flash[:success] = t("words.success_update")
+      redirect_to @word
+    else
+      flash.now[:danger] = t("words.fail_update")
+      render :edit
+    end
+  end
+
   private
   def word_params
     params.require(:word).permit :national, :category_id,
       answers_attributes: [:id, :meaning, :status, :_destroy]
+  end
+
+  def find_word
+    @word = Word.find(params[:id])
   end
 end
