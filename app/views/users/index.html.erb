@@ -1,0 +1,13 @@
+<% provide(:title, t("user.title")) %>
+<h1><%= t("user.title") %></h1>
+<% if @users.empty? %>
+  <h2><%= t("user.empty") %></h2>
+<% else %>
+  <ul class="user">
+    <% @users.each do |user| %>
+      <li>
+        <h2> <%= user.name %> </h2>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
