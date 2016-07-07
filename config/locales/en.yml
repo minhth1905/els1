@@ -30,6 +30,8 @@ en:
     confirmation: "Confirmation"
     create_fail: "Error create"
     create_success: "Create new user successfully!"
+    destroy_fail: "Error delete"
+    destroy_success: "Delete successfully!"
     edit_user: "Edit user"
     empty: "Have no data in database"
     must_login: "Please log in."

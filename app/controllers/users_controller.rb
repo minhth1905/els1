@@ -29,6 +29,15 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def destroy
+    if @user.destroy
+      flash[:success] = t("user.destroy_sucess")
+    else
+      flash[:danger] = t("user.destroy_fail")
+    end
+    redirect_to users_url
+  end
+
   def update
     if @user.update_attributes(user_params)
       flash[:success] = t("user.user_edit")
