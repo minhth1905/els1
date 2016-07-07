@@ -54,6 +54,8 @@ en:
   words:
     alert_1: "Have no words"
     alert_2: "Please select to filter words"
+    create_fail: "Create failed!"
+    create_success: "Create successfully!"
     label_all: "All"
     label_learn: "Learned"
     label_notlearn: "Not learned"
@@ -61,3 +63,4 @@ en:
     radio_learn: "learned"
     radio_notlearn: "notlearned"
     submit: "Filter"
+    submit_create: "Create"
