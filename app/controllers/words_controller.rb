@@ -49,6 +49,15 @@ class WordsController < ApplicationController
     end
   end
 
+  def destroy
+    if @word.destroy
+      flash[:success] = t("words.success_delete")
+    else
+      flash[:danger] = t("words.fail_delete")
+    end
+    redirect_to words_url
+  end
+
   private
   def word_params
     params.require(:word).permit :national, :category_id,
