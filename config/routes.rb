@@ -16,5 +16,6 @@ Rails.application.routes.draw do
 
  resources :categories, only: [:index, :show]
  resources :users, except: [:destroy]
+ resources :words
 
 end
