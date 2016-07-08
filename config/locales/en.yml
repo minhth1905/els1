@@ -56,6 +56,7 @@ en:
     alert_2: "Please select to filter words"
     create_fail: "Create failed!"
     create_success: "Create successfully!"
+    fail_delete: "Error delete"
     fail_update: "Error update"
     label_all: "All"
     label_learn: "Learned"
@@ -66,4 +67,5 @@ en:
     submit: "Filter"
     submit_create: "Create"
     submit_update: "Update"
+    success_delete: "Delete successfully!"
     success_update: "Update category successfully!"
