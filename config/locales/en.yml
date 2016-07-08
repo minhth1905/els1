@@ -69,3 +69,8 @@ en:
     submit_update: "Update"
     success_delete: "Delete successfully!"
     success_update: "Update category successfully!"
+  relationship:
+    follower: "Follower"
+    follow: "Follow"
+    number_follower: "User have %{number} user follower"
+    unfollow: "Unfollow"

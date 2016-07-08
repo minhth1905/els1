@@ -13,9 +13,12 @@ Rails.application.routes.draw do
    resources :users
    resources :categories
  end
+ resources :users do
+   resources :followers, only: [:index]
+ end
 
  resources :categories, only: [:index, :show]
  resources :users, except: [:destroy]
  resources :words
-
+ resources :relationships, only: [:create, :destroy]
 end
