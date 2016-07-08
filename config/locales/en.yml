@@ -26,6 +26,25 @@ en:
     err: "error"
     title: "The form contains"
 
+  relationship:
+    follow: "Follow"
+    follower: "Follower"
+    following: "Following"
+    number_follower: "User have %{number} user follower"
+    number_following: "User following %{number} people"
+    unfollow: "Unfollow"
+
+  session:
+    account: "Account"
+    login: "Log in"
+    login_fail: "Invalid email/password combination"
+    logout: "Log out"
+    new: "New user?"
+    profile: "Profile"
+    signup: "Sign up now!"
+    setting: "Settings"
+    user: "User"
+
   user:
     confirmation: "Confirmation"
     create_fail: "Error create"
@@ -41,16 +60,6 @@ en:
     update_fail: "Error update"
     user_edit: "Profile updated"
 
-  session:
-    account: "Account"
-    login: "Log in"
-    login_fail: "Invalid email/password combination"
-    logout: "Log out"
-    new: "New user?"
-    profile: "Profile"
-    signup: "Sign up now!"
-    setting: "Settings"
-    user: "User"
   words:
     alert_1: "Have no words"
     alert_2: "Please select to filter words"
@@ -69,8 +78,3 @@ en:
     submit_update: "Update"
     success_delete: "Delete successfully!"
     success_update: "Update category successfully!"
-  relationship:
-    follower: "Follower"
-    follow: "Follow"
-    number_follower: "User have %{number} user follower"
-    unfollow: "Unfollow"
