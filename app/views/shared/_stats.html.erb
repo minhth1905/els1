@@ -6,4 +6,10 @@
     </strong>
     <%= t("relationship.follower") %>
   </a>
+  <a href="<%= followings_path @user.id %>">
+    <strong id="following" class="stat">
+      <%= @user.following.count %>
+    </strong>
+    <%= t("relationship.following") %>
+  </a>
 </div>

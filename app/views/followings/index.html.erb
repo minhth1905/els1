@@ -1,0 +1,9 @@
+<%= provide :title, t("relationship.following") %>
+<h4>
+  <%= t "relationship.number_following", number: @users.count %>
+<h4>
+<%= will_paginate @users %>
+<ul class="users">
+  <%= render @users %>
+</ul>
+<%= will_paginate @users %>

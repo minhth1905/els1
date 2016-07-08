@@ -59,6 +59,10 @@ ActiveRecord::Schema.define(version: 20160702161946) do
     t.datetime "updated_at",            null: false
   end
 
+  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
+  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
+  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
+
   create_table "results", force: :cascade do |t|
     t.integer  "user_id",     limit: 4
     t.integer  "word_id",     limit: 4
