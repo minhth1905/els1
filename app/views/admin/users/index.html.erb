@@ -1,0 +1,17 @@
+<% provide(:title, t("admin.admin_all")) %>
+<%= t("admin.admin_all") %>
+<% if @users.empty? %>
+  <h2><%= t("user.empty") %></h2>
+<% else %>
+  <ul class="user">
+    <% @users.each do |user| %>
+      <li>
+        <%= link_to user.name, user %>
+        <% unless user.is_admin? %>
+          <%= link_to t("admin.delete"), admin_user_path(user.id),
+            method: :delete, data: {confirm: t("admin.confirm_delete")} %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

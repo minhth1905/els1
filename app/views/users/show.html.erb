@@ -1,7 +1,11 @@
 <% provide(:title, @user.name) %>
-<h1>
+<li>
   <%= @user.name %>
-</h1>
+  <% if current_user.is_admin? && !current_user?(@user) %>
+    <%= link_to t("admin.delete"), admin_user_path(@user.id), method: :delete,
+      data: {confirm: t("admin.confirm_delete")} %>
+  <% end %>
+</li>
 <div>
   <%= render "shared/stats" %>
 </div>
