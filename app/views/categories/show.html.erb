@@ -2,7 +2,6 @@
   <%= @category.title %>
 </h4>
 <%= will_paginate %>
-
 <ul class="category">
   <% @words.each do |word| %>
     <li>
@@ -10,5 +9,8 @@
     </li>
   <% end %>
 </ul>
-
+<% if current_user.admin %>
+  <%= link_to t("admin.categories_delete"), admin_category_path, method: :delete,
+    data: {confirm: t("admin.confirm_delete")} %>
+<% end %>
 <%= will_paginate %>

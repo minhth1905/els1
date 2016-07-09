@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+
+  def access_admin
+    unless current_user.admin
+      flash[:danger] = t("admin.access_admin")
+      redirect_to root_path
+    end
+  end
 end

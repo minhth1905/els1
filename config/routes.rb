@@ -14,8 +14,10 @@ Rails.application.routes.draw do
    resources :categories
  end
  resources :users do
-   resources :followers, only: [:index]
-   resources :followings, only: [:index]
+   member do
+    resources :followers, only: [:index]
+    resources :followings, only: [:index]
+   end
  end
 
  resources :categories, only: [:index, :show]
