@@ -45,11 +45,11 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
   end
 end

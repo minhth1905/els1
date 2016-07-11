@@ -2,8 +2,19 @@
 <h4>
   <%= t "relationship.number_following", number: @users.count %>
 <h4>
-<%= will_paginate @users %>
-<ul class="users">
-  <%= render @users %>
-</ul>
-<%= will_paginate @users %>
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left"><%= t("user.name") %></th>
+      <th class="text-left"><%= t("user.email") %></th>
+      <th class="text-left"><%= t("user.address") %></th>
+    </tr>
+  </thead>
+  <tbody class="table-hover">
+    <% if @users.empty? %>
+      <h2><%= t("user.empty") %></h2>
+    <% else %>
+      <%= render @users %>
+    <% end %>
+  </tbody>
+</table>

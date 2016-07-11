@@ -1,9 +1,23 @@
 <% provide(:title, t("user.title")) %>
-<h1><%= t("user.title") %></h1>
-<% if @users.empty? %>
-  <h2><%= t("user.empty") %></h2>
-<% else %>
-  <ul class="user">
-    <%= render @users %>
-  </ul>
-<% end %>
+
+<div class="table-title">
+  <h1><%= t("user.title") %></h1>
+</div>
+
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left"><%= t("user.name") %></th>
+      <th class="text-left"><%= t("user.email") %></th>
+      <th class="text-left"><%= t("user.address") %></th>
+    </tr>
+  </thead>
+
+  <tbody class="table-hover">
+    <% if @users.empty? %>
+      <h2><%= t("user.empty") %></h2>
+    <% else %>
+      <%= render @users %>
+    <% end %>
+  </tbody>
+</table>

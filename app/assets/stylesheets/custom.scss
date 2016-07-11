@@ -1,8 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* universal */
-
 body {
   padding-top: 60px;
 }
@@ -22,7 +20,6 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
-/* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -48,7 +45,6 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-/* header */
 
 #logo {
   float: left;
@@ -65,7 +61,6 @@ p {
   color: #fff;
   text-decoration: none;
 }
-/* footer */
 
 footer {
   margin-top: 45px;
@@ -95,7 +90,6 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
-/* forms */
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -136,7 +130,11 @@ h4 {
   text-align: center;
 }
 
-/* word */
 .categories {
   list-style-type: none;
+}
+
+.page-center{
+  width: 350px;
+  margin: 0 auto;
 }

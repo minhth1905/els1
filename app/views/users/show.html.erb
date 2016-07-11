@@ -1,4 +1,5 @@
 <% provide(:title, @user.name) %>
+
 <li>
   <%= @user.name %>
   <% if current_user.is_admin? && !current_user?(@user) %>
@@ -6,9 +7,7 @@
       data: {confirm: t("admin.confirm_delete")} %>
   <% end %>
 </li>
-<div>
-  <%= render "shared/stats" %>
-</div>
-<div>
-  <%= render "follow_form" %>
-</div>
+
+<%= render "shared/stats" %>
+
+<%= render "follow_form" %>
