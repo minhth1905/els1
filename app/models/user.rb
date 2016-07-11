@@ -1,13 +1,14 @@
 class User < ActiveRecord::Base
   before_save {email.downcase!}
+  enum admin: [:is_guest, :is_admin]
 
-  validates :password, presence: true, length: {minimum: 6}
-  validates :name,  presence: true, length: {maximum: 50}
+  validates :password, presence: true, allow_nil: true,
+    length: {minimum: Settings.user_password_min}
+  validates :name,  presence: true, length: {maximum: Settings.user_name_max}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence:true, length: {maximum: 255},
+  validates :email, presence:true, length: {maximum: Settings.user_email_max},
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
-  validates :password, presence: true, length: {minimum: 6}, allow_nil: true
 
   USER_ATTRIBUTES = [:name, :email, :address, :password,
     :password_confirmation]

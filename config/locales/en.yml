@@ -9,6 +9,12 @@ en:
   homepage: "This is the homepage for Elearning App"
   welcome: "Welcome to the Elearning App"
 
+  admin:
+    admin_all : "All users"
+    admin_show: "Admin show"
+    confirm_delete: "Are you sure?"
+    delete: "Delete"
+
   categories:
     empty: "Have no data in database"
     fail_create: "Error create"
@@ -46,6 +52,7 @@ en:
     user: "User"
 
   user:
+    access_admin: "You aren't admin"
     confirmation: "Confirmation"
     create_fail: "Error create"
     create_success: "Create new user successfully!"
